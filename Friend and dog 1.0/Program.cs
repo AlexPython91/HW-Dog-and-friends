@@ -10,18 +10,17 @@ int count = 0;
 
 while (distance > 5)
 {
-    if (friend = 1)
+    if (friend == 1)
     {
-        GetTime(time) = GetDistance(distance) / secondFriendSpeed + dogSpeed;
-        friend = 1;
+        time = distance / (secondFriendSpeed + dogSpeed);
+        friend = 2;
     }
     else
     {
-        GetTime(time) = GetDistance(distance) / firstFriendSpeed + dogSpeed;
-        friend = 2;
+        time = distance / (firstFriendSpeed + dogSpeed);
+        friend = 1;
     }
+    distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
+    count++;
 }
-count++;
-int distance = distance - firstFriendSpeed + secondFriendSpeed * time;
-
 Console.WriteLine(count);
